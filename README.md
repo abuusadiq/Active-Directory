@@ -33,7 +33,7 @@ Go to DC-1’s network settings → Click networking → Click the link next to 
 ![image](https://github.com/user-attachments/assets/41d8f494-3bf6-4007-a2ca-79cf6e23529c)
 
 
-<h3>Step 2: Setup Resources in Azure</h3>
+<h3>Step 2: Join Client-1 to your DC-1 (mydomain.com)</h3>
 
 Go to Client-1's Virtual Machine. On the left, click Networking, then click the link next to NIC. Click DNS server, pick Custom, and type in DC-1's private IP address. Click Save.
 
@@ -44,7 +44,7 @@ When it's done updating,  Restart Client-1.
 
 ![image](https://github.com/user-attachments/assets/19f4274a-6f43-44c5-8e73-b7fe0a784357)
 
-<h3>Step 3: Setup Resources in Azure</h3>
+<h3>Step 3: Ensure Connectivity between client and Domain Controller</h3>
 
 Log in to Client-1 with Microsoft Remote Desktop, open the command line, and type ping -t 10.0.0.4 to check if DC-1 (10.0.0.4) is online, the Command line will start to ping DC-1 successfully.
 note: we can open PowerShell and run 'ipconfig /all' The output for the DNS settings should show DC-1’s private IP Address
